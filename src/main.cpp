@@ -2,21 +2,17 @@
 #include <DallasTemperature.h>
 #include "PCC_V4.h"
 
-// put function declarations here:
-int myFunction(int, int);
-
 void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
-}
-//hhgiugiugiugtiugtufruyfdruyfdry
-void loop() {
-  // put your main code here, to run repeatedly:
+  // initialize digital pin LED_BUILTIN as an output.
+
+  pinMode(PC13, OUTPUT);
 }
 
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x - y;
-  Serial.println("MY PCC");
+// the loop function runs over and over again forever
+void loop() {
+  digitalWrite(PC13, HIGH);  // turn the LED on (HIGH is the voltage level)
+  delay(1000);                      // wait for a second
+  digitalWrite(PC13, LOW);   // turn the LED off by making the voltage LOW
+  delay(1000);                      // wait for a second
 }
 
